@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mupenzi Theogene</title>
     <link rel="shortcut icon" href="Images/icon.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.js" integrity="sha512-ioFpA4cD4gmoOhHglW4f6gep7w+YL7UMKtXx4ebJ5NN4SscmnZYYmSjkA+DaHGvBI4wpYVPx2C7DmmV9TgbIbQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="app.css">
@@ -25,7 +26,7 @@
       <div class="container">
         <h1 class="navbar-brand" href="#home-section" data-aos="fade-in"data-aos-duration="2000"><span class='m'>M</span>upe<span class="nzi">nzi</span></h1>
         
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="#navbarSupportedContent">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="#menu" aria-expanded="true" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         
@@ -136,7 +137,7 @@
     <section class="d-block pt-4" id="contact-section" >
     	<div class="container-fluid">
         <div class="big text-center contact-txt"  data-aos="fade-right" data-aos-duration="3000">Contact <span class="me">us</span></div>
-    		<div class="row ">
+    		<div class="row">
     			<div class="col-lg-3 d-none d-lg-flex">
             
             <div class="contact-img"  data-aos="zoom-in-up" data-aos-duration="3000"></div>
@@ -299,30 +300,6 @@
 </a>
 
 
-<script>
-
-  /* NUMBER COUNTER */
-  
-  document.addEventListener("load", () => {
-    function counter(id, start, end, duration) {
-     let obj = document.getElementById(id),
-      current = start,
-      range = end - start,
-      increment = end > start ? 1 : -1,
-      step = Math.abs(Math.floor(duration / range)),
-      timer = setInterval(() => {
-       current += increment;
-       obj.textContent = current;
-       if (current == end) {
-        clearInterval(timer);
-       }
-      }, step);
-    }
-    counter("count1", 0, 400, 3000);
-    counter("count2", 100, 50, 2500);
-   });
-   
-</script>
 <script>
   //sending email
   function sentMail(){
