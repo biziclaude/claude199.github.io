@@ -22,6 +22,7 @@
   </head>
 
 <body>
+  
   <nav class="navbar navbar-expand-lg">
       <div class="container">
         <h1 class="navbar-brand" href="#home-section" data-aos="fade-in"data-aos-duration="2000"><span class='m'>M</span>upe<span class="nzi">nzi</span></h1>
@@ -45,9 +46,7 @@
             <li class="nav-item">
               <a class="nav-link" href="#services-section" data-aos="fade-down" data-aos-delay="300"  data-aos-duration="1000">Services</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" data-aos="fade-down"data-aos-delay="400"  data-aos-duration="1000">Portfolio</a>
-            </li>
+           
             <li class="nav-item">
               <a class="nav-link" href="#contact-section" data-aos="fade-down"data-aos-delay="500" data-aos-duration="1000">Contact Me</a>
             </li>
@@ -57,13 +56,14 @@
         </div>
       </div>
   </nav>
+  
 
-    
-	<section class="hero-wrap" id="home-section">
+	<section class="vh-100" id="home-section">
+     <div class="container-fluid">
   <div class="overlay"></div>
     <div class="text-center m-auto mt-0 home">
       <div class="row">
-        <div class="col-md-5 info">
+        <div class="col-md-5">
           
           Hey! My name is 
           <h2 class="name" data-aos="fade-left" data-aos-duration="3000"><span>MUPENZI</span> <span class="theo">Theogene</span> </h2>
@@ -85,16 +85,15 @@
         <div class="col-md-7"><img src="Images/cover (2).png" alt="" width="100%"  data-aos="fade-up"  data-aos-duration="3000" style="opacity: 0.4;"></div>
       </div>
     </div>
+    </div>
   </section>
 
-
-    
-    <section class="ftco-about img ftco-section ftco-no-pt ftco-no-pb h-100 d-block" id="about-section" >
+    <section class=" vh-100 d-block" id="about-section" >
     	<div class="container-fluid">
     		<div class="row d-flex">
     			<div class="col-md-6 col-lg-6 d-flex text-center">
 
-            <div class="img d-flex d-none d-lg-block align-self-stretch align-items-center about-img" data-aos="fade-right" data-aos-duration="3000">
+            <div class="img d-flex d-none d-lg-block align-self-stretch align-items-center about-img vh-100" data-aos="fade-right" data-aos-duration="3000">
             </div>
     			</div>
 
@@ -106,8 +105,10 @@
 		          <div class="col-md-12 heading-section">
 
 		            <h2 class="big mb-4 mt-5" data-aos="fade-left" data-aos-duration="3000">About <span class="me">Me</span></h2>
-		            <p  data-aos="zoom-out-up" data-aos-duration="3000">I am a developer by passion, Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quidem neque vel minus, voluptatem itaque quae. Est nam doloribus, 
-                  tenetur obcaecati quod veniam, sed eos quibusdam corrupti libero assumenda incidunt.</p>
+		            <p  data-aos="zoom-out-up" data-aos-duration="3000">I am a passion driven, experienced and      suitably qualified developer with a thorough knowledge of Fullstackdevelopment, maintain 
+                  software, web design. Am a hard worker, sincere and team work spirit.
+                  I am energetic, creative and also versatile; I have worked with different company with extensive 
+                  experience in Information Technology</p>
 		            
                   <div class="table-about" data-aos="zoom-out-up" data-aos-delay="1000" data-aos-duration="1000">
                   <table class="table table-borderless table-sm">
@@ -134,7 +135,7 @@
 
 
     
-    <section class="d-block pt-4" id="contact-section" >
+    <section class="d-block pt-4 vh-100" id="contact-section">
     	<div class="container-fluid">
         <div class="big text-center contact-txt"  data-aos="fade-right" data-aos-duration="3000">Contact <span class="me">us</span></div>
     		<div class="row">
@@ -208,7 +209,7 @@
     </section>
 
 
-    <section class="skills-section d-block mt-5" id="skills-section">
+    <section class="skills-section d-block mt-5 vh-100" id="skills-section">
       <div class="container-fluid">
         <div class="row">
           <div class="col-12 text-center">
@@ -216,7 +217,7 @@
           </div>
         </div>
         <div class="skills row text-center no-gutters">
-          <div class="col-2"><i class="fi fi-brands-html5"></i></div>
+          <div class="col-2" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"><i class="fi fi-brands-html5"></i></div>
           <div class="col-2"><i class="fi fi-brands-bootstrap"></i></div>
           <div class="col-2"><ion-icon name="logo-vue"></ion-icon></div>
           <div class="col-2"><i class="fa-brands fa-react"></i></div>
@@ -262,45 +263,156 @@
 
    
 
-    <section class="services-section d-block " id="services-section">
+    <section class="services-section d-block vh-100" id="services-section">
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 text-center">
+        <div class="text-center">
+          
             <h1 class="services-head">Services</h1>
-          </div>
-        </div>
-        <div class="services row text-center no-gutter">
-          <div class="col-4">UI/UX design</i></div>
-          <div class="col-4">Frontend</div>
-          <div class="col-4">Backend</div>
-          
           
         </div>
-        <div class="row text-center">
-          <div class="col">
-            <div class="container">
+        <div class="services row text-center  mb-5 gx-5 gy-2">
+          <div class="col-md-4">
+            UI/UX design
             <div class="card">
-              <div class="card-body text-center bg-none rounded-5 shadow">
-                Available for freelance, I can get you a high quality work.<br>
-                <a href="https://www.upwork.com/freelancers/~01ddd72c0cc3aa1102?viewMode=1" class="btn btn-primary hire-btn" type="menu" data-aos="fade-left"data-aos-duration="1000">Hire Me</a>
+              <div class="card-body">
+                I am a cerified web designer, I use figma to design mockups for web application as well as other systems. 
               </div>
             </div>
+          </div>
+          <div class="col-md-4">
+            Backend
+            <div class="card">
+              <div class="card-body">
+                I develop backend applications using different backend frameworks like PHP laravel, Flask and Django 
+              </div>
             </div>
+          </div>
+          <div class="col-md-4">
+            Frontend
+            <div class="card">
+              <div class="card-body">
+                I develop frontend applications using different backend frameworks like vue.js, React.js and Bootstrap 
+              </div>
+            </div>
+          </div>
+          
+          
+        </div>
+
+        <div class="row text-center lead ">
+          <div class="col d-flex justify-content-center jumbotron">
+            
+            <div class="card rounded-4 bg-info">
+              <div class="card-body text-center rounded-4 shadow">
+                Available for freelance, I can get you a high quality work.<br>
+
+                <!-- Button trigger modal -->
+                  <a href="#" class="btn btn-danger mt-4" data-aos="fade-zoom-in" data-aos-duration="600" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Hire Me</a>
+
+                            
+                  <!-- Modal -->
+                  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog  modal-dialog-centered">
+                      <div class="modal-content" style="background-color: bisque;">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Hire Me</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="form-group d-flex">
+                            <label for="email">Email: </label>
+                            <input type="email" name="" id="" class="form-control shadow" placeholder="Enter your email">
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary btn-sm">Send</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+              </div>
+            </div>
+           
           </div>
         </div>
         
       </div>
     </section>
+ 
+<footer class="bg-black py-5">
+  <div class="container text-white">
+    <div class="row">
+      <div class="col-md-3">
+        <h2>About</h2>
+          <p>
+            I am a passion driven, experienced and      suitably qualified developer with a thorough knowledge of Fullstackdevelopment, maintain software, web design. Am a hard worker, sincere and team work spirit. I am energetic, creative and also versatile; I have worked with different company with extensive     experience in Information Technology
+          </p>
+        </div>
+      <div class="col-md-3">
+        <h2>Links</h2>
+        <p class="footer-link">
+          
+          <a aria-current="page" href="#">&rarr; Home</a>
+          <a href="#about-section">&rarr; About Me</a>
+        
+          <a href="#skills-section">&rarr; Skills</a>
+       
+          <a href="#services-section">&rarr; Services</a>
+        
+          <a>&rarr; Portfolio</a>
+        
+          <a href="#contact-section">&rarr; Contact Me</a>
+  
+        </p>
+      </div>
+      <div class="col-md-3">
+        <h2>Services</h2>
+        <p class="footer-link">
+          <a href="#services-section">&rarr; Frontend development</a>
+          <a href="#services-section">&rarr; Backend development</a>
+          <a href="#services-section">&rarr; UI/UX design</a>
+          <a href="#services-section">&rarr; Mobile app development</a>
+        </p>
+      </div>
+      <div class="col-md-3">
+        <h2>
+          Have a Questions?
+        </h2>
+        <p class="footer-link">
+          <a href="tel:+250-789-564-776"><i class="fa fa-phone"></i> +250789564776<br></a>
+          <a href="mailto:mupenzi17theo@gmail.com"><ion-icon name="mail"></ion-icon> mupenzi17theo@gmail.com</a><br>
+          <div class="medias2">
+            <a href="https://github.com/mupenzi17"><ion-icon name="logo-github"></ion-icon></a>
+            <a href="https://twitter.com/Mupenzi_Theo?t=LHGZ_uBB8n1ZZlHox438kQ&s=09"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="https://www.linkedin.com/in/mupenzi-theogene-53369919b"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="https://www.instagram.com/theogene.mupenzi/"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="https://web.facebook.com/profile.php?id=100005690627025"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://wa.me/+250789564776"><ion-icon name="logo-whatsapp"></ion-icon></a>
+            
+          </div>
+        </p>
+      </div>
+    </div>
+      
+    <h5 class="text-center">Copyright &copy;<span id="year"></span>, All right reserved</h5>
+    
+  </div>
+</footer>
 
-   
+  
 <!-- BACK TO THE TOP -->
-<a href="#" class="back-to-top animate__animated animate__bounce">
+<a href="#" class="back-to-top animate__animated animate__bounce d-none d-md-fixed">
   <ion-icon name="arrow-up-outline"></ion-icon>
   <span class="d-block mt-0">TOP</span>
 </a>
 
 
 <script>
+  let date = new Date();
+  document.getElementById("year").innerHTML = date.getFullYear();
   //sending email
   function sentMail(){
     

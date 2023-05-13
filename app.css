@@ -11,7 +11,7 @@
 
 }
 .navbar {
-    background: rgb(255,255,255,0.2);
+    background: rgb(255,255,255,0.3);
     font-weight: bold;
 }
 body{
@@ -24,7 +24,6 @@ body{
 .home{
     color: white;
     font-size: 30px;
-    width: 98%;
 }
 .info {
     margin-top: 150px;
@@ -105,6 +104,17 @@ span.theo {
   .medias ion-icon:hover{
     background-color:#E56363;
     border: 1px solid #E56363;
+  } 
+  .medias2 ion-icon{
+    color:#ffffff;
+    border: 1px solid rgb(150, 148, 148);
+    border-radius: 50%;
+    padding: 10px;
+    transition: 0.5s;
+  }
+  .medias2 ion-icon:hover{
+    background-color:#E56363;
+    border: 1px solid #E56363;
   }
   #about-section{
     background-color: #ffffff;
@@ -113,7 +123,7 @@ span.theo {
 
   .about-img {
     width: 100%;
-    height: 658px;
+   
     background-image: url('Images/DSC_9574.JPG');
     background-position: center;
     background-repeat: no-repeat;
@@ -135,11 +145,9 @@ span.theo {
   }
   #contact-section {
     color: white;
-    height: 658px;
+    /* height: 658px; */
   }
   .contact-img{
-    width: 300px;
-    height: 300px;
     border-radius: 300px;
     background-image: url("Images/Screenshot_20230329-220011~5.jpg");
     background-repeat: no-repeat;
@@ -226,11 +234,14 @@ span.theo {
 
 .services-section{
   color: white;
-  height: 658px;
+  /* height: 658px; */
   
 } 
-.services-section .card{
-  border-radius: 30px;
-  box-shadow: inset #E56363;
-  text-shadow: 3 3 blur #000;
+
+.footer-link a{
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: rgb(102, 104, 104);
+  display: block;
+  font-weight: bold;
 }
