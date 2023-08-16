@@ -152,6 +152,9 @@
     <section class="d-block pt-4 vh-100" id="contact-section">
     	<div class="container-fluid">
         <div class="big text-center contact-txt"  data-aos="fade-right" data-aos-duration="3000">Contact <span class="me">Me</span></div>
+
+        <span class="text-center">We like to hear from you</span>
+
     		<div class="row">
     			<div class="col-lg-3 d-none d-lg-flex">
             
@@ -203,14 +206,18 @@
                   <ion-icon name="mail-outline"></ion-icon>
                 </div>
 
-                <form action="#" method="get" class="form">
+                <form action="#" method="get" class="form" id="form" autocomplete="off">
+                  <input type="hidden" name="contact_number">
                   <div class="form-group">
-                    <input type="text" id="name" class="form-control p-2 ps-4 mb-2" placeholder="Enter you name" name="name">
-                    <input type="text" id="email" class="form-control p-2 ps-4 mb-2" placeholder="Enter you email" name="email">
-                    <input type="text" id="subject" class="form-control p-2 ps-4 mb-2" placeholder="Subject" name="subject">
-                    <textarea name="body" id="body" rows="3" class="form-control p-2 ps-4" placeholder="Message...."></textarea>
-                    
-                    <button type="button"  onclick="sentMail()" class="btn btn-primary my-5 hire-btn">Send Email</button>
+                    <input onfocus="getFocus(this.id)" type="text" id="name" class="form-control p-2 ps-4 mb-2" placeholder="Enter your name" name="name" required>
+                    <label id="name_lbl">Full names<span style="color:red">*</span></label>
+                    <input onfocus="getFocus(this.id)" type="email" name="reply_to" id="reply_to" class="form-control p-2 ps-4 mb-2" placeholder="Enter yours email" required>
+                    <label id="email_lbl">Your email<span style="color:red">*</span></label>
+                    <input onfocus="getFocus(this.id)" type="text" id="subject" class="form-control p-2 ps-4 mb-2" placeholder="Subject" name="subject" required>
+                    <label id="subject_lbl">Subject<span style="color:red">*</span></label>
+                    <textarea onfocus="getFocus(this.id)" name="message" id="message" rows="3" class="form-control p-2 ps-4" placeholder="Message...." required></textarea>
+                    <label id="message_lbl">Message<span style="color:red">*</span></label>
+                    <button type="submit" id="button" class="btn btn-primary my-3 hire-btn">Send Email</button>
                   </div>
                 </form>
               </div>
@@ -467,8 +474,85 @@
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 <script src="https://kit.fontawesome.com/3ead5f03d9.js" crossorigin="anonymous"></script>
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('7-LmivcUuOTV-Koas')
+</script>
+
+<script type="text/javascript">
+	const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.innerHTML = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'contact_form';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.innerHTML = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.innerHTML = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
+</script>
 <script>
-  
+  function getFocus(id){
+    let name = document.getElementById('name_lbl');
+    let email = document.getElementById('email_lbl');
+    let subject = document.getElementById('subject_lbl');
+    let message = document.getElementById('message_lbl');
+
+    if(id==='name'){
+      email.style='display:none';
+      subject.style='display:none';
+      message.style='display:none';
+      name.style=`
+        display: inline-block;
+        z-index: 0;
+        top: 67px;
+      `;
+    }
+    else if(id==='reply_to'){
+      name.style='display:none';
+      subject.style='display:none';
+      message.style=`display:none`;
+      email.style=`
+        display: inline-block;
+        z-index: 0;
+        top: 122px;
+      `;
+    }
+    else if(id==='subject'){
+      name.style='display:none';
+      email.style='display:none'
+      message.style=`display:none`;
+      subject.style=`
+        display: inline-block;
+        z-index: 0;
+        top: 170px;
+      `;
+    }
+    else if(id==='message'){
+      name.style='display:none';
+      email.style='display:none'
+      subject.style='display:none';
+      message.style=`
+        display: inline-block;
+        z-index: 0;
+        top: 220px;
+      `;
+    }
+    
+  }
 </script>
 
 </body>

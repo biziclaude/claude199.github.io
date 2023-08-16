@@ -245,3 +245,18 @@ span.theo {
   display: block;
   font-weight: bold;
 }
+
+.form label{
+  color: rgb(0, 0, 0);
+  position: absolute;
+  left: 35px;
+  background-color: rgb(171, 215, 233);
+  padding-left:5px;
+  padding-right:5px;
+  font-size: 14px;
+  border-radius: 7px;
+  display: none;
+  transition-property: all;
+  transition: 2s;
+  transition-delay: 1s;
+}
