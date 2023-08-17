@@ -469,7 +469,7 @@
   });
 </script>
 
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
@@ -497,10 +497,27 @@ document.getElementById('form')
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
       btn.innerHTML = 'Send Email';
-      alert('Sent!');
+      // SWAL2
+      Swal.fire({
+        position:'top',
+        icon: 'success',
+        title: 'Great!',
+        text: 'Email is sent successfully!',
+        showConfirmButton: true,
+        timer: 3000,
+        timerProgressBar: true,
+      })
     }, (err) => {
       btn.innerHTML = 'Send Email';
-      alert(JSON.stringify(err));
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Something went wrong!',
+        timer: 3000,
+        timerProgressBar: true,
+        footer: '<a href="mailto:mupenzi17theo@gmail.com">Go to email instead</a>'
+      })
+      
     });
 });
 </script>
