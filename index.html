@@ -153,7 +153,7 @@
     	<div class="container-fluid">
         <div class="big text-center contact-txt"  data-aos="fade-right" data-aos-duration="3000">Contact <span class="me">Me</span></div>
 
-        <span class="text-center">We like to hear from you</span>
+        <i><center class="text-center">We like to hear from you! Don't hesitate to talk to us.</center></i>
 
     		<div class="row">
     			<div class="col-lg-3 d-none d-lg-flex">
@@ -165,10 +165,10 @@
                 <div class="card-body text-center">
                   
                   <table><tr>
-                  <td><ion-icon name="call-outline" class="bg-primary d-flex"></ion-icon></td>
+                  <td><a href="tel:+250-789-564-776"><ion-icon name="call-outline" class="bg-primary d-flex"></ion-icon></a></td>
                   <td><span class="d-none d-lg-flex">Call us on:</span>
                     <span class="d-none d-lg-flex"><a href="tel:+250-789-564-776" class="text-primary">+250-789-564-776</a></span>
-                    <div class = "dropdown">
+                  
                      
                   
                   </td></tr>
@@ -179,7 +179,7 @@
               <div class="text-white" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
                 <div class="card-body text-center">
                   <table><tr>
-                    <td><ion-icon name="logo-whatsapp" class="bg-success"></ion-icon></td>
+                    <td><a href="https://wa.me/+250789564776"><ion-icon name="logo-whatsapp" class="bg-success"></ion-icon></a></td>
                     <td><span class="d-none d-lg-flex">Whatsapp me on:</span>
                   <span class="d-none d-lg-flex"><a href="https://wa.me/+250789564776" class="text-success">+250789564776</a></span></td>
                   </tr></table>
@@ -189,7 +189,7 @@
               <div class="text-white" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
                 <div class="card-body text-center">
                   <table><tr>
-                    <td><ion-icon name="mail-unread-outline" class="bg-danger d-flex"></ion-icon></td>
+                    <td><a href="mailto:mupenzi17theo@gmail.com"><ion-icon name="mail-unread-outline" class="bg-danger d-flex"></ion-icon></a></td>
                   <td><span class="d-none d-lg-flex">Email me on:</span>
                   <span class="d-none d-lg-flex"><a href="mailto:mupenzi17theo@gmail.com" class="text-danger">mupenzi17theo@gmail.com</a></span></td></tr></table>
                 </div>
@@ -209,13 +209,13 @@
                 <form action="#" method="get" class="form" id="form" autocomplete="off">
                   <input type="hidden" name="contact_number">
                   <div class="form-group">
-                    <input onfocus="getFocus(this.id)" type="text" id="name" class="form-control p-2 ps-4 mb-2" placeholder="Enter your name" name="name" required>
+                    <input onkeypress="getFocus(this.id)" type="text" id="name" class="form-control p-2 ps-4 mb-2" placeholder="Enter your name" name="name" required>
                     <label id="name_lbl">Full names<span style="color:red">*</span></label>
-                    <input onfocus="getFocus(this.id)" type="email" name="reply_to" id="reply_to" class="form-control p-2 ps-4 mb-2" placeholder="Enter yours email" required>
+                    <input onkeypress="getFocus(this.id)" type="email" name="reply_to" id="reply_to" class="form-control p-2 ps-4 mb-2" placeholder="Enter yours email" required>
                     <label id="email_lbl">Your email<span style="color:red">*</span></label>
-                    <input onfocus="getFocus(this.id)" type="text" id="subject" class="form-control p-2 ps-4 mb-2" placeholder="Subject" name="subject" required>
+                    <input onkeypress="getFocus(this.id)" type="text" id="subject" class="form-control p-2 ps-4 mb-2" placeholder="Subject" name="subject" required>
                     <label id="subject_lbl">Subject<span style="color:red">*</span></label>
-                    <textarea onfocus="getFocus(this.id)" name="message" id="message" rows="3" class="form-control p-2 ps-4" placeholder="Message...." required></textarea>
+                    <textarea onkeypress="getFocus(this.id)" name="message" id="message" rows="3" class="form-control p-2 ps-4" placeholder="Message...." required></textarea>
                     <label id="message_lbl">Message<span style="color:red">*</span></label>
                     <button type="submit" id="button" class="btn btn-primary my-3 hire-btn">Send Email</button>
                   </div>
