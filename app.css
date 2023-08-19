@@ -266,24 +266,8 @@ body, html {
   overflow-x: hidden;
 }
 
-.slider {
-  position: fixed;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 150px;
-  color: white;
-  font-family: sans-serif;
-  text-align: right;
-}
-
-.slider input {
-  width: 100%;
-  margin-bottom: 5px;
-  cursor: pointer;
-}
 #stars{
-position: absolute;
+position: fixed;
 z-index: -1;
 }
 
