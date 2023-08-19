@@ -23,6 +23,10 @@
 
 <body>
   
+  <canvas id="stars"></canvas>
+<!-- <div class="slider">
+    <input type="range" min="0.5" max="15" value="2" step="0.5">
+ </div> -->
   <nav class="navbar navbar-expand-lg">
       <div class="container">
         <h1 class="navbar-brand" href="#home-section" data-aos="fade-in"data-aos-duration="2000"><span class='m'>M</span>upe<span class="nzi">nzi</span></h1>
@@ -57,7 +61,6 @@
       </div>
   </nav>
   
-   
 	<section class="vh-100" id="home-section">
      <div class="container-fluid">
   <div class="overlay"></div>
@@ -274,7 +277,7 @@
           <div class="col-6">
             <h2>Happy customers</h2>
             <div class="col-md-4">
-              <span id="count2" class="display-4"></span>
+              <!--  -->
             </div>
           </div>
         </div>
@@ -571,7 +574,110 @@ document.getElementById('form')
     
   }
 </script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.js'></script>
+<script>
+  
+function countStart(){
+  const $counters = document.querySelectorAll(".js-count-up"),
+        options = {
+          useEasing: true,
+          useGrouping: true,
+          separator: ",",
+          decimal: "."
+        };
 
+  $counters.forEach( (item) => {
+    const value = item.dataset.value;
+    const counter = new CountUp(item, value, options);
+    counter.start();
+  });
+}
+
+new Waypoint({
+  element: document.querySelector('.level'),
+  handler: function() {
+    countStart()
+    
+  },
+  offset: '50%'
+});
+</script>
+
+<!-- ANIMATED HERO BACKGROUND -->
+<script type="text/javascript">
+	const canvas = document.getElementById("stars");
+const ctx = canvas.getContext("2d");
+const slider = document.querySelector(".slider input");
+
+let screen, stars, params = {speed: 2, number: 300, extinction: 4};
+
+setupStars();
+updateStars();
+
+slider.oninput = function () {
+    params.speed = this.value;
+};
+
+// update stars on resize to keep the thing centered
+window.onresize = function () {
+    setupStars();
+};
+
+// star constructor
+function Star() {
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+    this.z = Math.random() * canvas.width;
+
+    this.move = function () {
+        this.z -= params.speed;
+        if (this.z <= 0) {
+            this.z = canvas.width;
+        }
+    };
+
+    this.show = function () {
+        let x, y, rad, opacity;
+        x = (this.x - screen.c[0]) * (canvas.width / this.z);
+        x = x + screen.c[0];
+        y = (this.y - screen.c[1]) * (canvas.width / this.z);
+        y = y + screen.c[1];
+        rad = canvas.width / this.z;
+        opacity = (rad > params.extinction) ? 1.5 * (2 - rad / params.extinction) : 1;
+
+        ctx.beginPath();
+        ctx.fillStyle = "rgba(255, 255, 255, " + opacity + ")";
+        ctx.arc(x, y, rad, 0, Math.PI * 2);
+        ctx.fill();
+    }
+}
+
+// setup <canvas>, create all the starts
+function setupStars() {
+    screen = {
+        w: window.innerWidth,
+        h: window.innerHeight,
+        c: [window.innerWidth * 0.5, window.innerHeight * 0.5]
+    };
+    window.cancelAnimationFrame(updateStars);
+    canvas.width = screen.w;
+    canvas.height = screen.h;
+    stars = [];
+    for (let i = 0; i < params.number; i++) {
+        stars[i] = new Star();
+    }
+}
+
+function updateStars() {
+    ctx.fillStyle = "black";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    stars.forEach(function (s) {
+        s.show();
+        s.move();
+    });
+    window.requestAnimationFrame(updateStars);
+}
+</script>
 </body>
 
 </html>

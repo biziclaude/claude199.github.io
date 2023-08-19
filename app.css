@@ -14,11 +14,7 @@
     background: rgb(255,255,255,0.3);
     font-weight: bold;
 }
-body{
-    
-    background-color: #131e22;
 
-}
 
 
 .home{
@@ -259,4 +255,41 @@ span.theo {
   transition-property: all;
   transition: 2s;
   transition-delay: 1s;
+}
+
+
+/* ANIMATED BACKGROUND */
+body, html {
+  padding: 0;
+  margin: 0;
+  overscroll-behavior: none;
+  overflow-x: hidden;
+}
+
+.slider {
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  color: white;
+  font-family: sans-serif;
+  text-align: right;
+}
+
+.slider input {
+  width: 100%;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+#stars{
+position: absolute;
+z-index: -1;
+}
+
+
+body{
+    
+  background-color: #131e22;
+
 }
