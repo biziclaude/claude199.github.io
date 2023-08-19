@@ -7,6 +7,7 @@
     <title>Mupenzi Theogene</title>
     <link rel="shortcut icon" href="Images/icon.png" type="image/x-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.js" integrity="sha512-ioFpA4cD4gmoOhHglW4f6gep7w+YL7UMKtXx4ebJ5NN4SscmnZYYmSjkA+DaHGvBI4wpYVPx2C7DmmV9TgbIbQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="app.css">
@@ -19,14 +20,12 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
-  </head>
+</head>
 
 <body>
   
-  <canvas id="stars"></canvas>
-<!-- <div class="slider">
-    <input type="range" min="0.5" max="15" value="2" step="0.5">
- </div> -->
+  <canvas id="stars" class="d-none d-md-block"></canvas>
+ 
   <nav class="navbar navbar-expand-lg">
       <div class="container">
         <h1 class="navbar-brand" href="#home-section" data-aos="fade-in"data-aos-duration="2000"><span class='m'>M</span>upe<span class="nzi">nzi</span></h1>
@@ -65,21 +64,9 @@
      <div class="container-fluid">
   <div class="overlay"></div>
     <div class="text-center m-auto mt-0 home">
+    
       
-       <!-- Welcome toast -->
-    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-      <div class="toast-header">
-        <strong class="me-auto">Welcome note</strong>
-        <small>Now</small>
-        <button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
-      </div>
-      <div class="toast-body">
-        Hello there! Welcome to my official portifolio, you can <a href="#contact-section">contact me</a> or <a href="https://www.upwork.com/freelancers/~01ddd72c0cc3aa1102?viewMode=1">hire me</a>
-      </div>
-    </div>
-    <!-- End welcome toast -->
-
-      <div class="row">
+      <div class="row mt-5">
         <div class="col-md-5">
           
           Hey! My name is 
@@ -90,13 +77,14 @@
           <a href="#contact-section" class="btn btn-primary">Contact <ion-icon name="chevron-down-outline"></ion-icon></a>
         </div>
           <div class="medias">
-            <a href="https://github.com/mupenzi17"><ion-icon name="logo-github"></ion-icon></a>
-            <a href="https://twitter.com/Mupenzi_Theo?t=LHGZ_uBB8n1ZZlHox438kQ&s=09"><ion-icon name="logo-twitter"></ion-icon></a>
-            <a href="https://www.linkedin.com/in/mupenzi-theogene-53369919b"><ion-icon name="logo-linkedin"></ion-icon></a>
-            <a href="https://www.instagram.com/theogene.mupenzi/"><ion-icon name="logo-instagram"></ion-icon></a>
-            <a href="https://web.facebook.com/profile.php?id=100005690627025"><ion-icon name="logo-facebook"></ion-icon></a>
-            <a href="https://wa.me/+250789564776"><ion-icon name="logo-whatsapp"></ion-icon></a>
-            <a href=""><ion-icon name="globe-outline"></ion-icon></a>
+            <a href="https://github.com/mupenzi17"><ion-icon name="logo-github" data-bs-toggle="tooltip" data-bs-placement="top" title="Github"></ion-icon></a>
+            <a href="https://codepen.io/mupenzi17theo"><ion-icon name="logo-codepen"  data-bs-toggle="tooltip" data-bs-placement="top" title="Codepen"></ion-icon></a>
+            <a href="https://twitter.com/Mupenzi_Theo?t=LHGZ_uBB8n1ZZlHox438kQ&s=09"><ion-icon name="logo-twitter"data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter"></ion-icon></a>
+            <a href="https://www.linkedin.com/in/mupenzi-theogene-53369919b"><ion-icon name="logo-linkedin" data-bs-toggle="tooltip" data-bs-placement="top" title="LinkedIn"></ion-icon></a>
+            <a href="https://www.instagram.com/theogene.mupenzi/"><ion-icon name="logo-instagram"data-bs-toggle="tooltip" data-bs-placement="top" title="Insta"></ion-icon></a>
+            <a href="https://web.facebook.com/profile.php?id=100005690627025"><ion-icon name="logo-facebook" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook"></ion-icon></a>
+            <a href="https://wa.me/+250789564776"><ion-icon name="logo-whatsapp"  data-bs-toggle="tooltip" data-bs-placement="top" title="Whatsapp"></ion-icon></a>
+            <a href="https://mupenzi17.github.io"><ion-icon name="globe-outline" data-bs-toggle="tooltip" data-bs-placement="top" title="Website"></ion-icon></a>
           </div>
         </div>
         <div class="col-md-7"><img src="Images/cover (2).png" alt="" width="100%"  data-aos="fade-up"  data-aos-duration="3000" style="opacity: 0.4;"></div>
@@ -457,6 +445,7 @@
   }
 
 </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -607,20 +596,17 @@ new Waypoint({
 <script type="text/javascript">
 	const canvas = document.getElementById("stars");
 const ctx = canvas.getContext("2d");
-const slider = document.querySelector(".slider input");
 
-let screen, stars, params = {speed: 2, number: 300, extinction: 4};
+let screen, stars, params = {speed: 0.5, number: 100, extinction: 5};
 
 setupStars();
 updateStars();
 
-slider.oninput = function () {
-    params.speed = this.value;
-};
 
 // update stars on resize to keep the thing centered
 window.onresize = function () {
     setupStars();
+    updateStars();
 };
 
 // star constructor
@@ -643,7 +629,7 @@ function Star() {
         y = (this.y - screen.c[1]) * (canvas.width / this.z);
         y = y + screen.c[1];
         rad = canvas.width / this.z;
-        opacity = (rad > params.extinction) ? 1.5 * (2 - rad / params.extinction) : 1;
+        opacity = (rad > params.extinction) ? 1.5 * (2 - rad / params.extinction) : 0.5;
 
         ctx.beginPath();
         ctx.fillStyle = "rgba(255, 255, 255, " + opacity + ")";
@@ -669,7 +655,7 @@ function setupStars() {
 }
 
 function updateStars() {
-    ctx.fillStyle = "black";
+    ctx.fillStyle = "#131e22";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     stars.forEach(function (s) {
         s.show();
@@ -678,6 +664,12 @@ function updateStars() {
     window.requestAnimationFrame(updateStars);
 }
 </script>
+<script>
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+  </script>
 </body>
 
 </html>
