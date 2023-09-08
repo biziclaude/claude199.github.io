@@ -24,7 +24,7 @@
 
 <body>
   
-  <canvas id="stars" style="position: fixed;"></canvas>
+  <canvas id="stars" style="position: absolute;" class="d-none d-md-block"></canvas>
  
   <nav class="navbar navbar-expand-lg">
       <div class="container">
@@ -81,7 +81,7 @@
             <a href="https://codepen.io/mupenzi17theo"><ion-icon name="logo-codepen"  data-bs-toggle="tooltip" data-bs-placement="top" title="Codepen"></ion-icon></a>
             <a href="https://twitter.com/Mupenzi_Theo?t=LHGZ_uBB8n1ZZlHox438kQ&s=09"><ion-icon name="logo-twitter"data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter"></ion-icon></a>
             <a href="https://www.linkedin.com/in/mupenzi-theogene-53369919b"><ion-icon name="logo-linkedin" data-bs-toggle="tooltip" data-bs-placement="top" title="LinkedIn"></ion-icon></a>
-            <a href="https://www.instagram.com/theogene.mupenzi/"><ion-icon name="logo-instagram"data-bs-toggle="tooltip" data-bs-placement="top" title="Insta"></ion-icon></a>
+            <!-- <a href="https://www.instagram.com/theogene.mupenzi/"><ion-icon name="logo-instagram"data-bs-toggle="tooltip" data-bs-placement="top" title="Insta"></ion-icon></a> -->
             <a href="https://web.facebook.com/profile.php?id=100005690627025"><ion-icon name="logo-facebook" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook"></ion-icon></a>
             <a href="https://wa.me/+250789564776"><ion-icon name="logo-whatsapp"  data-bs-toggle="tooltip" data-bs-placement="top" title="Whatsapp"></ion-icon></a>
             <a href="https://mupenzi17.github.io"><ion-icon name="globe-outline" data-bs-toggle="tooltip" data-bs-placement="top" title="Website"></ion-icon></a>
@@ -118,7 +118,7 @@
                   <div class="table-about" data-aos="zoom-out-up" data-aos-delay="1000" data-aos-duration="1000">
                   <table class="table table-borderless table-sm">
 		            	<tr><td>Name: </td> <td>MUPENZI Theogene</td></tr>
-                  <tr><td>Date of birth: <td> February, 1996</td></tr>
+                  <!-- <tr><td>Date of birth: <td> February, 1996</td></tr> -->
                   <tr><td>Address: <td>Kigali, Rwanda </td></tr>
                   <tr><td>Zip code:  <td>250</td></tr>
                   <tr><td>Email:  <td>mupenzi17theo@gmail.com</td></tr>
@@ -129,7 +129,7 @@
 		        </div>
             
               <div class="mt-3">
-              	<a data-aos="fade-up" data-aos-duration="3000" download="" href="./documents/Mupenzi Theogene.pdf" class="btn btn-secondary hire-btn">Download CV <ion-icon name="download"></ion-icon></a>
+              	<a data-aos="fade-up" data-aos-duration="3000" download="true" href="documents\MUPENZI_Resume.pdf" class="btn btn-secondary hire-btn">Download CV <ion-icon name="download"></ion-icon></a>
               </div>
 	        </div>
         
@@ -144,7 +144,7 @@
     	<div class="container-fluid">
         <div class="big text-center contact-txt"  data-aos="fade-right" data-aos-duration="3000">Contact <span class="me">Me</span></div>
 
-        <i><center class="text-center">We like to hear from you! Don't hesitate to talk to us.</center></i>
+        <i><center class="text-center">I like to hear from you!</center></i>
 
     		<div class="row">
     			<div class="col-lg-3 d-none d-lg-flex">
@@ -255,18 +255,19 @@
           
           
         </div>
-        <div class="row text-center">
-          <div class="col-6">
-            <h2>Projects</h2>
-            <div class="col-md-4">
-              <span id="count1" class="display-4"></span>
+        <div class="row text-center mt-5 pt-4">
+          <div class="col-md-6">
+            <h2><span style="border-top: 5px solid #E56363;">Completed Projects</span></h2>
+            <div class="display-4 text-center mt-5" id="projects">
+                23
             </div>
           </div>
-          <div class="col-6">
-            <h2>Happy customers</h2>
-            <div class="col-md-4">
-              <!--  -->
-            </div>
+          <div class="col-md-6">
+            <h2><span style="border-top: 5px solid #E56363;">Happy customers</span></h2>
+            
+            <div class="display-4 text-center mt-5" id="customers">
+              12
+          </div>
           </div>
         </div>
         
@@ -359,7 +360,7 @@
     <div class="row">
       <div class="col-md-3">
         <h2>About</h2>
-          <p>
+          <p style=" text-align: justify; text-justify: inter-word;">
             I am a passion driven, experienced and      suitably qualified developer with a thorough knowledge of Fullstackdevelopment, maintain software, web design. Am a hard worker, sincere and team work spirit. I am energetic, creative and also versatile; I have worked with different company with extensive     experience in Information Technology
           </p>
         </div>
@@ -408,7 +409,7 @@
       </div>
     </div>
       
-    <h5 class="text-center">Copyright &copy;<span id="year"></span>, All right reserved</h5>
+    <h5 class="text-center">&copy;<span id="year"></span>, All right reserved. MUPENZI Theogene</h5>
     
   </div>
 </footer>
@@ -473,7 +474,7 @@
 <script type="text/javascript">
   emailjs.init('7-LmivcUuOTV-Koas')
 </script>
-
+<!-- EMAIL -->
 <script type="text/javascript">
 	const btn = document.getElementById('button');
 
@@ -513,6 +514,8 @@ document.getElementById('form')
     });
 });
 </script>
+
+<!-- CONTACT FORM -->
 <script>
   function getFocus(id){
     let name = document.getElementById('name_lbl');
@@ -670,6 +673,83 @@ function updateStars() {
     return new bootstrap.Tooltip(tooltipTriggerEl)
   })
   </script>
+
+  <!-- ANIMATED COUNTER PROJECTS and CUSTOMERS-->
+  <script type="text/javascript">
+      
+      // Define the callback function
+    function handleIntersection(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // The target element is in the viewport
+          // You can trigger your desired event here
+            counter();
+            counter2();
+          
+          // You can also unobserve the target element if you only want to trigger the event once
+          // observer.unobserve(entry.target);
+        }
+      });
+    }
+
+    // Create an Intersection Observer
+    const observer = new IntersectionObserver(handleIntersection);
+
+    const targetElement = document.querySelector('#projects');
+    const targetElement2 = document.querySelector('#customers');
+    if (targetElement) {
+      // Start observing the target element
+      observer.observe(targetElement);
+    }  
+    if (targetElement2) {
+      // Start observing the target element
+      observer.observe(targetElement);
+    }
+
+    function counter(){
+
+
+        let div = document.getElementById('projects');
+        const content = div.innerHTML;
+        let start = 0; 
+
+        setInterval(function(){
+        
+            if (start < Number(content)) {
+                    start+=1;
+                    div.innerHTML=start+"+";
+            }
+            else{
+                clearInterval();
+            }
+        }, 50); 
+
+    }
+    
+    function counter2(){
+
+
+      let div = document.getElementById('customers');
+      const content = div.innerHTML;
+      let start = 0; 
+
+      setInterval(function(){
+
+          if (start < Number(content)) {
+                  start+=1;
+                  div.innerHTML=start+"+";
+          }
+          else{
+              clearInterval();
+          }
+      }, 50); 
+
+    }
+
+
+  </script>
+
+
 </body>
 
 </html>
