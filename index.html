@@ -22,7 +22,7 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
 </head>
 
-<body>
+<body id="body">
   
   <canvas id="stars" style="position: absolute;" class="d-none d-md-block"></canvas>
  
@@ -748,8 +748,14 @@ function updateStars() {
 
 
   </script>
-
-
+<!-- Prevent right clicks -->
+  <script>
+    const body = document.getElementById('body');
+    body.oncontextmenu = function(e){
+   
+      e.preventDefault();
+    }
+  </script>
 </body>
 
 </html>
