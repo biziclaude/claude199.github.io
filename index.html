@@ -72,7 +72,13 @@
           Hey! My name is 
           <h2 class="name" data-aos="fade-left" data-aos-duration="3000"><span> MUPENZI</span> <span class="theo">Theogene</span> </h2>
         
-          <div><span class="iam">I'm </span><span class="text"></span></div>
+          <div><span class="iam">I'm </span>
+
+            <span class="typewrite text" data-period="2000" data-type='["Freelancer", "UI/UX Designer","Web Designer", "Graphics Designer", "Fullstack developer","Frontend developer", "Backend Developer", "Mobile App Developer"]'>
+              <span class="wrap"></span>
+            </span>
+
+          </div>
         <div class="mt-5">
           <a href="#contact-section" class="btn btn-primary">Contact <ion-icon name="chevron-down-outline"></ion-icon></a>
         </div>
@@ -305,7 +311,7 @@
             Frontend
             <div class="card">
               <div class="card-body">
-                I develop frontend applications using different backend frameworks like vue.js, React.js and Bootstrap 
+                I develop frontend applications using different frontend frameworks like vue.js, React.js and Bootstrap 
               </div>
             </div>
           </div>
@@ -455,14 +461,67 @@
   AOS.init();
 </script>
 <script>
-  var typing=new Typed(".text", {
-      strings: ["", "Freelancer", "UI/UX Designer","Web Designer", "Graphics Designer", "Fullstack developer","Frontend developer", "Backend Developer", "Mobile App Developer"],
-      typeSpeed: 150,
-      backSpeed: 40,
-      loop: true,
-  });
+  // var typing=new Typed(".text", {
+  //     strings: ["", "Freelancer", "UI/UX Designer","Web Designer", "Graphics Designer", "Fullstack developer","Frontend developer", "Backend Developer", "Mobile App Developer"],
+  //     typeSpeed: 150,
+  //     backSpeed: 40,
+  //     loop: true,
+  // });
 </script>
+<!-- TYPING ANIMATION 2 -->
+<script type="text/javascript">
+	var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
 
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+    };
+</script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
