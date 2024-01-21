@@ -101,6 +101,9 @@ span.theo {
     background-color:#E56363;
     border: 1px solid #E56363;
   } 
+
+
+
   .medias2 ion-icon{
     color:#ffffff;
     border: 1px solid rgb(150, 148, 148);
@@ -277,4 +280,33 @@ body{
     
   background-color: #131e22;
 
+}
+
+
+
+.media2 i{
+  
+  color: #E56363;
+  border-radius: 100%;
+  transition: 0.5s;
+  font-size: 50px;
+  padding: 10px;
+  background-color: #dfe1e4;
+  border:  1px solid #E56363;
+}
+.media2 i:hover{
+  color:rgb(255, 255, 255);
+  background-color:  #E56363
+} 
+
+
+.icon{
+  font-size: 55px;
+  transition:  0.5s;
+}
+.icon:hover{
+  color: #E56363;
+}
+.rate{
+  color: goldenrod
 }
