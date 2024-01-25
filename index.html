@@ -30,11 +30,11 @@
       <div class="container">
         <h1 class="navbar-brand" href="#home-section" data-aos="fade-in"data-aos-duration="2000"><span class='m'>M</span>upe<span class="nzi">nzi</span></h1>
         
-        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation" id="menubtn">
-          <span class="navbar-toggler-icon bg-idanger"></span>
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapsse" data-bs-target="#naavbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation" id="menubtn">
+          <span class="navbar-toggler-icon"></span>
         </button>
         
-        <div class="collapse navbar-collapse show" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto me-100 mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="#" data-aos="fade-down"data-aos-delay="0">Home</a>
@@ -1148,12 +1148,14 @@ function updateStars() {
   </script>
 
   <script>
-    let menu = document.getElementById("menubtn");
 
-    menu.onclick = ()=>{
-      
-      menu.class='active';
-    }
+      const toggleButton = document.getElementById('menubtn');
+      const content = document.getElementById('navbarSupportedContent');
+
+      toggleButton.addEventListener('click', () => {
+        content.classList.toggle('show');
+      });
+    
   </script>
 </body>
 
